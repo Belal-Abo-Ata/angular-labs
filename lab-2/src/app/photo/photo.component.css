@@ -1,0 +1,27 @@
+div {
+	width: 500px;
+	/* aspect-ratio: 1; */
+	margin: 1rem auto;
+}
+
+div > img {
+	max-width: 100%;
+	object-fit: contain;
+}
+
+div.button-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+button {
+	background-color: aqua;
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.25rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: #ccc;
+	font-weight: bold;
+	text-transform: capitalize;
+}

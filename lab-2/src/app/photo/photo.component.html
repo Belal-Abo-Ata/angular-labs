@@ -1,0 +1,10 @@
+<div>
+	<img [src]="photo" alt="" />
+</div>
+
+<div class="button-container">
+	<button type="button" (click)="changePhoto('increase')">next</button>
+	<button type="button" (click)="changePhoto('decrease')">prev</button>
+	<button type="button" (click)="changePhoto('slide')">slide</button>
+	<button type="button" (click)="changePhoto('stop')">stop</button>
+</div>
