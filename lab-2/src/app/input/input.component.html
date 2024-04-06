@@ -1,7 +1,21 @@
-<form>
-	<input type="text" name="name" [(ngModel)]="name" />
+<form class="max-w-xl mx-auto mb-8">
+	<div class="mb-5">
+		<label for="fName" class="mb-3 block text-base font-medium text-[#07074D]"> Name </label>
+		<input
+			type="text"
+			name="Name"
+			id="Name"
+			placeholder="Name"
+			class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+			[(ngModel)]="name"
+		/>
+	</div>
+	<p class="text-xl bg-[#6A64F1] p-4 text-white font-bold mb-4">Name: {{ name }}</p>
 
-	<p>{{ name }}</p>
-
-	<button type="reset">Reset</button>
+	<button
+		class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
+		type="reset"
+	>
+		Reset
+	</button>
 </form>

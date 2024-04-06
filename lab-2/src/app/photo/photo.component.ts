@@ -11,7 +11,7 @@ export class PhotoComponent {
 	photos: string[] = ['8.jpg', '9.jpg', '10.jpg', '14.jpg', '16.jpg'];
 	photoIndex: number = 0;
 	photo: string = `assets/${this.photos[this.photoIndex]}`;
-	interval: any;
+	interval: any = false;
 
 	changePhoto(method: string): void {
 		switch (method) {
@@ -21,7 +21,7 @@ export class PhotoComponent {
 				break;
 			}
 			case 'slide': {
-				this.interval = setInterval(() => {
+				this.interval ? '' : this.interval = setInterval(() => {
 					this.photoIndex++;
           this.setPhoto(0, this.photos.length - 1)
 				}, 500);
@@ -29,6 +29,7 @@ export class PhotoComponent {
 			}
       case 'stop': {
         clearInterval(this.interval);
+        this.interval = false;
         break;
       }
 			default: {
