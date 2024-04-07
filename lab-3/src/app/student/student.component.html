@@ -1,0 +1,21 @@
+<div class="text-gray-900 w-[500px]">
+	<div class="p-4 flex">
+		<h1 class="text-3xl">Students</h1>
+	</div>
+	<div class="px-3 py-4 flex justify-center">
+		<table class="w-full text-md bg-white shadow-md rounded mb-4">
+			<tbody>
+				<tr class="border-b">
+					<th class="p-3 px-5 text-center">Name</th>
+					<th class="p-3 px-5 text-center">Age</th>
+				</tr>
+				@for (std of stdArr; track std.id) {
+					<tr class="border-b hover:bg-orange-100 odd:bg-gray-100">
+						<td class="p-3 px-5 text-center">{{ std.name }}</td>
+						<td class="p-3 px-5 text-center">{{ std.age }}</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>
